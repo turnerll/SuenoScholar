@@ -10,13 +10,13 @@ const questions = [
   {
     id: 1,
     name: "Behavioral",
-    description: "Behavioral questions focus on how you would perform, or behave, in a given scenario",
+    description: "From LinkedIn, Amazon, Adobe",
     difficulty: "Easy",
   },
   {
     id: 2,
     name: "Technical",
-    description: "Questions relating to medicine. It's no doubt medicine-related questions will be part of your interview, so you'll want to be prepared for these.",
+    description: "From Google, Meta, and Apple",
     difficulty: "Medium",
   },
 ];
@@ -24,20 +24,20 @@ const questions = [
 const interviewers = [
   {
     id: "John",
-    name: "Juan Luis",
-    description: "Dean of Admissions",
+    name: "John",
+    description: "Software Engineering",
     level: "L3",
   },
   {
     id: "Richard",
-    name: "Ricardo",
-    description: "General Internal Medicine Attending",
+    name: "Richard",
+    description: "Product Management",
     level: "L5",
   },
   {
     id: "Sarah",
-    name: "Maria",
-    description: "Medical Student, MS4",
+    name: "Sarah",
+    description: "Other",
     level: "L7",
   },
 ];
@@ -196,9 +196,9 @@ export default function DemoPage() {
         selected.name === "Behavioral"
           ? `Tell me about yourself. Why don${`’`}t you walk me through your resume?`
           : selectedInterviewer.name === "John"
-          ? "What is cholecystitis, and what organ does it involve?"
+          ? "What is a Hash Table, and what is the average case and worst case time for each of its operations?"
           : selectedInterviewer.name === "Richard"
-          ? "A patient arrives with a cough. Talk me through how you would approach this problem."
+          ? "Uber is looking to expand its product line. Talk me through how you would approach this problem."
           : "You have a 3-gallon jug and 5-gallon jug, how do you measure out exactly 4 gallons?";
 
       setStatus("Transcribing");
@@ -304,12 +304,7 @@ export default function DemoPage() {
   return (
     <AnimatePresence>
       {step === 3 ? (
-        <motion.div 
-          className="w-full min-h-screen flex flex-col px-4 pt-2 pb-8 md:px-8 md:py-2 bg-[#FCFCFC] relative overflow-x-hidden"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
+        <div className="w-full min-h-screen flex flex-col px-4 pt-2 pb-8 md:px-8 md:py-2 bg-[#FCFCFC] relative overflow-x-hidden">
           <p className="absolute w-full top-0 h-[60px] flex flex-row justify-between -ml-4 md:-ml-8">
             <span className="text-sm text-[#1a2b3b] font-medium">
               demo interview
@@ -395,7 +390,8 @@ export default function DemoPage() {
                   </p>
                 </div>
                 <Link
-                  href="https://latinohealthinnovation.org
+                  href="https://github.com/Tameyer41/liftoff"
+                  target="_blank"
                   className="group rounded-full pl-[8px] min-w-[180px] pr-4 py-2 text-[13px] font-semibold transition-all flex items-center justify-center bg-[#1E2B3A] text-white hover:[linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #0D2247] no-underline flex gap-x-2  active:scale-95 scale-100 duration-75"
                   style={{
                     boxShadow:
@@ -424,7 +420,7 @@ export default function DemoPage() {
                       ></path>
                     </svg>
                   </span>
-                  .
+                  Star on Github
                 </Link>
               </motion.div>
               <motion.div
@@ -465,15 +461,15 @@ export default function DemoPage() {
                 <div className="w-full flex flex-col max-w-[1080px] mx-auto justify-center">
                   <h2 className="text-2xl font-semibold text-left text-[#1D2B3A] mb-2">
                     {selected.name === "Behavioral"
-                      ? `Tell me about yourself. Why don${`’`}t you walk me through your CV?`
+                      ? `Tell me about yourself. Why don${`’`}t you walk me through your resume?`
                       : selectedInterviewer.name === "John"
-                      ? "What is cholecystitis, and what organ does it involve?"
+                      ? "What is a Hash Table, and what is the average case and worst case time for each of its operations?"
                       : selectedInterviewer.name === "Richard"
-                      ? "A patient arrives with a cough. Talk me through how you would approach this problem."
+                      ? "Uber is looking to expand its product line. Talk me through how you would approach this problem."
                       : "You have a 3-gallon jug and 5-gallon jug, how do you measure out exactly 4 gallons?"}
                   </h2>
                   <span className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal mb-4">
-                    Asked by top medical schools like Columbia, Stanford and more. When you're ready to start, press the red record button at the bottom. 
+                    Asked by top companies like Google, Facebook and more
                   </span>
                   <motion.div
                     initial={{ y: -20 }}
@@ -767,7 +763,7 @@ export default function DemoPage() {
                       Restart demo
                     </button>
                     <Link
-                      href="https://latinohealthinnovation.org"
+                      href="https://github.com/Tameyer41/liftoff"
                       target="_blank"
                       className="group rounded-full pl-[8px] min-w-[180px] pr-4 py-2 text-[13px] font-semibold transition-all flex items-center justify-center bg-[#1E2B3A] text-white hover:[linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #0D2247] no-underline flex gap-x-2  active:scale-95 scale-100 duration-75"
                       style={{
@@ -797,7 +793,7 @@ export default function DemoPage() {
                           ></path>
                         </svg>
                       </span>
-                      ~
+                      Star on Github
                     </Link>
                   </div>
                 </div>
@@ -850,7 +846,8 @@ export default function DemoPage() {
                     Select a question type
                   </h2>
                   <p className="text-[14px] leading-[20px] text-[#1a2b3b] font-normal my-4">
-                    We have hundreds of questions from top medical schools. Get started by choosing a type of question below.
+                    We have hundreds of questions from top tech companies.
+                    Choose a type to get started.
                   </p>
                   <div>
                     <RadioGroup value={selected} onChange={setSelected}>
@@ -1393,7 +1390,7 @@ export default function DemoPage() {
                 <ul className="mb-auto list-none">
                   <li className="list-none flex items-center">
                     <p className="text-[12px] font-extrabold text-[#1E293B]">
-                    SueñoScholar
+                      Liftoff
                     </p>
                   </li>
                   <li className="mt-4 list-none flex items-center rounded-[9px] text-gray-900 py-[2px]">
@@ -1661,9 +1658,9 @@ export default function DemoPage() {
                       {selected.name === "Behavioral"
                         ? "Tell me about yourself"
                         : selectedInterviewer.name === "John"
-                        ? "What is cholecystitis, and what organ does it involve?"
+                        ? "What is a Hash Table, and what is the average case for each of its operations?"
                         : selectedInterviewer.name === "Richard"
-                        ? "A patient arrives with a cough. Talk me through how you would approach this problem."
+                        ? "Uber is looking to expand its product line. How would you go about doing this?"
                         : "You have a 3-gallon jug and 5-gallon jug, how do you measure out exactly 4 gallons?"}
                     </motion.span>
 
@@ -1769,11 +1766,11 @@ export default function DemoPage() {
                                 <p>Why this company?</p>
                               </div>
                               <p className="text-wrap grow font-normal text-[7px]">
-                                Why do you want to go to medical school?
+                                Why do you want to work for Google?
                               </p>
                               <div className="flex flex-row space-x-1">
                                 <p className="inline-flex items-center justify-center truncate rounded-full border-[0.5px] border-gray-300 px-[3px] text-[7px] font-normal hover:bg-gray-50">
-                                  Patient Management
+                                  Product Management
                                 </p>
                                 <p className="inline-flex items-center justify-center truncate rounded-full border-[0.5px] border-[#D0E7DC] bg-[#F3FAF1] px-[3px] text-[7px] font-normal hover:bg-[#edf8ea]">
                                   <span className="mr-1 flex items-center text-emerald-600">
@@ -2015,7 +2012,7 @@ export default function DemoPage() {
                             <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-zinc-900/[7.5%] group-hover:ring-zinc-900/10"></div>
                             <div className="relative flex h-full flex-col overflow-hidden">
                               <div className="flex items-center text-left text-[#1a2b3b]">
-                                <p>Walk me through how you would deal with your boss getting mad at you for arriving late.</p>
+                                <p>Walk me through this function</p>
                               </div>
                               <p className="text-wrap grow font-normal text-[7px]">
                                 Explain in as much detail as you can what this
