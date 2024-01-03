@@ -2,15 +2,6 @@ import "../styles/globals.css";
 import { Metadata } from "next";
 import { useAnalytics } from '@vercel/analytics'
 
-function MyApp({ Component, pageProps }) {
-  useAnalytics() // Initialize Vercel Analytics
-
-  return <Component {...pageProps} />
-}
-
-export default MyApp
-
-
 export const metadata: Metadata = {
   title: "SueñoScholar: The AI-Powered Mock Interview & Academic Prep Platform Empowering Latino/Latina Future Physicians",
   openGraph: {
@@ -38,6 +29,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
+  useAnalytics(); // Initialize Vercel Analytics
+  
   return (
     <html lang="en">
       <body className="scroll-smooth antialiased [font-feature-settings:'ss01']">
